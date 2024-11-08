@@ -28,6 +28,8 @@ int main() {
 
         else if (command == "whatsapp") { ShellExecute(0, L"open", L"https://web.whatsapp.com/", NULL, NULL, SW_SHOW); }
 
+        else if (command == "git") { ShellExecute(0, L"open", L"https://github.com/dashboard", NULL, NULL, SW_SHOW); }
+
         std::cout << std::endl;
     } while (command != "exit");
 
