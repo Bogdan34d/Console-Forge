@@ -130,8 +130,10 @@
     <ClCompile Include="Console Forge.cpp">
       <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpp17</LanguageStandard>
     </ClCompile>
+    <ClCompile Include="GoogleSeartch.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="GoogleSeartch.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>

@@ -1,20 +1,6 @@
 #include <iostream>
 #include <windows.h>
-
-class Google {
-    public:
-        std::string seartch;
-
-        void Seartch() {
-            std::cout << "Seartch on Google-> ";
-            std::cin >> seartch;
-
-            std::wstring url = L"https://www.google.com/search?q=";
-            url += std::wstring(seartch.begin(), seartch.end());
-
-            ShellExecute(0, L"open", url.c_str(), NULL, NULL, SW_SHOW);
-        }
-};
+#include "GoogleSeartch.h"
 
 int main() {
     SetConsoleTitle(L"Console Forge");
@@ -22,10 +8,10 @@ int main() {
 
     std::cout << "Console Forge 'web controller'\n";
     std::cout << "-> Write 'info' for more commands \n";
+
     std::cout << "\n";
 
     do {
-        
         std::cout << "web/command/-> ";
         std::cin >> command;
         if (command == "info") {
@@ -40,7 +26,7 @@ int main() {
 
         else if (command == "yt") { ShellExecute(0, L"open", L"https://www.youtube.com", NULL, NULL, SW_SHOW); }
 
-        else if (command == "ai") { ShellExecute(0, L"open", L"https://www.chatgpt.com", NULL, NULL, SW_SHOW); }
+        else if (command == "ai") {ShellExecute(0, L"open", L"https://www.chatgpt.com", NULL, NULL, SW_SHOW);}
 
         else if (command == "mail") { ShellExecute(0, L"open", L"https://mail.google.com/mail/u/0/#inbox", NULL, NULL, SW_SHOW); }
 
@@ -51,6 +37,11 @@ int main() {
         else if (command == "sr") {
             Google srch;
             srch.Seartch();
+        }
+
+        else if (command == "ytc") {
+            YouTube yt;
+            yt.main();
         }
 
         std::cout << std::endl;
