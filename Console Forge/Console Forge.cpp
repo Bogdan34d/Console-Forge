@@ -43,13 +43,17 @@ int main() {
         else if (command == "gh") {
             ShellExecute(0, L"open", L"https://github.com/", NULL, NULL, SW_SHOW);
         }
-
-        else if (command == "sr") {
+        //goggle
+        else if (command == "gos") {
             Google srch;
             srch.Seartch();
         }
-
-        else if (command == "yts") {
+        else if (command == "gop") {
+            Google srchp;
+            srchp.pozeSearch();
+        }
+        //yt
+        else if (command == "ytm") {
             yt yt1;
             yt1.searchYt();
         }
