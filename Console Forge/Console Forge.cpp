@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <windows.h>
 #include <string>
 #include "GoogleSeartch.h"
@@ -8,6 +8,7 @@
 int main() {
     SetConsoleTitle(L"Console Forge");
     std::string command;
+    std::string fibalw = "";
     HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE);
 
     std::cout << "\n";
@@ -23,6 +24,12 @@ int main() {
         std::cout << "-> ";
 
         std::getline(std::cin, command);
+
+        for (int a = 0; a < command.length(); a++) {
+            if (command[a] == ' ') {
+
+            }
+        }
         if (command == "?") {
             std::string search;
             std::string search2;
